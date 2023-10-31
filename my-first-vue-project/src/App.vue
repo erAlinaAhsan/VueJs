@@ -4,27 +4,28 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <div>
+    <header>
+      <div class="wrapper">
+        <nav>
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/counter">Counter</RouterLink>
+          <RouterLink to="/team">Team</RouterLink>
+        </nav>
+      </div>
+    </header>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/contact">Contact</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+    <RouterView />
+  </div>
 </template>
+
 
 <style scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .logo {
@@ -35,7 +36,7 @@ header {
 nav {
   width: 100%;
   font-size: 12px;
-  text-align: center;
+  text-align: left;
   margin-top: 2rem;
 }
 

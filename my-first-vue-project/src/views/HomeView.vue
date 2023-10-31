@@ -1,14 +1,9 @@
-<script setup>
-import TabbableTextarea from '@/components/TabbableTextarea.vue'
-import { ref } from 'vue'
-
-let comment = ref('test value')
+<script>
+export default {}
 </script>
 
 <template>
-  <main>
-    <form>
-      <TabbableTextarea v-model="comment" style="width: 100%; height: 300px" />
-    </form>
-  </main>
+  <div>
+    <h1>This is our Home Page.</h1>
+  </div>
 </template>
