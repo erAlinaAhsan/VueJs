@@ -34,7 +34,13 @@
       <tbody>
         <tr v-for="(task, index) in tasks" :key="index">
           <td>
-            <span :class="{ 'line-through': task.status === 'finished' }">
+            <span
+              :class="{ 'line-through': task.status === 'finished' }"
+              :style="{
+                'text-decoration':
+                  task.status === 'finished' ? 'line-through' : 'none',
+              }"
+            >
               {{ task.name }}
             </span>
           </td>
